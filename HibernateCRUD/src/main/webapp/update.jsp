@@ -20,7 +20,7 @@
   }
 %>
 </b>
-<form name="insert" method="post" action="Studentcontroller">
+<form name="insert" method="post" action="StudentController">
 <table>
   <tr>
      <td> <input type="hidden" name="id" value="<%=s.getId()%>"></td>

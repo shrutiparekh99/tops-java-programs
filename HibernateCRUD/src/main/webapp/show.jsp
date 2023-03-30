@@ -40,13 +40,13 @@
 	     <td><%=s.getAddress() %></td>
 	     <td><%=s.getGender() %></td>
 	     <td>
-		     <form name="edit" method="post" action="Studentcontroller">
+		     <form name="edit" method="post" action="StudentController">
 		     <input type="hidden" name="id" value="<%=s.getId() %>">
 		     <input type="submit" name="action" value="EDIT" class="btn btn-primary">
 		     </form>  
 	     </td>
 	    	<td>
-			     <form name="delete" method="post" action="Studentcontroller">
+			     <form name="delete" method="post" action="StudentController">
 			     <input type="hidden" name="id" value="<%=s.getId() %>">
 			     <input type="submit" name="action" value="DELETE" class="btn btn-danger">
 			     </form>  

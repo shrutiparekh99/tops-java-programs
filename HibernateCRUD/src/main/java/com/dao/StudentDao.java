@@ -14,7 +14,7 @@ public class StudentDao {
 	{
 		Session session=StudentUtil.createSession();
 		Transaction tr=session.beginTransaction();
-		session.save(s);
+		session.saveOrUpdate(s);
 		tr.commit();
 		session.close();
 		}
@@ -25,4 +25,21 @@ public class StudentDao {
  		session.close();
  		return list;
      }
+     public static Student getStudent(int id)
+     {
+  		Session session=StudentUtil.createSession();
+  		Student s=session.get(Student.class,id);
+  		session.close();
+  		return s;
+     }
+     public static void deleteStudent(int id)
+     {
+  		Session session=StudentUtil.createSession();
+  		Transaction tr=session.beginTransaction();
+  		Student s=session.get(Student.class,id);
+  		session.delete(s);
+  		tr.commit();
+  		session.close();
+     }
+
 } 
